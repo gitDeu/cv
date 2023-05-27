@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schüler-Lebenslauf erstellen: Einfach und effizient den perfekten Lebenslauf für Schüler gestalten</title>
+    <link rel="icon" href="https://gitdeu.github.io/cv/favicon.svg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 py-5 px-4">
+
+  
+
+
+  <div style="text-align: center;">
+    <div style="display: inline-block;">
+      <p style="font-family: 'Comic Neue', cursive;">Click Me!</p>
+      <a href="https://gitdeu.github.io/cv/Formatvorlage.png" target="_blank">
+        <button class="py-2 px-4 bg-green-500 text-white rounded mx-auto inline-block hover:bg-green-600" style="font-family: 'Comic Neue', cursive;">Formatvorlage</button>
+      </a>
+    </div>
+    <div style="display: inline-block;">
+      <p style="font-family: 'Comic Neue', cursive;">Click Me!</p>
+      <button class="py-2 px-4 bg-yellow-500 text-white rounded mx-auto inline-block hover:bg-yellow-600" style="font-family: 'Comic Neue', cursive;" onclick="copyWebsiteUrl()">Website-Adresse kopieren</button>
+    </div>
+  </div>
+
+  <script>
+    function copyWebsiteUrl() {
+      var websiteUrl = window.location.href;
+      navigator.clipboard.writeText(websiteUrl)
+        .then(function() {
+          alert('Link Copied Successfully!');
+        })
+        .catch(function(error) {
+          alert('Failed to copy URL: ' + error);
+        });
+    }
+  </script>
+  
+  
+    
+  <form id="resumeForm" class="p-4">
+      <div class="max-w-lg mx-auto bg-white rounded-lg shadow-md p-8 m-5">
+          <h1 class="text-2xl font-bold mb-6">Lebenslauf Foto:</h1>
+          
+              <div class="mb-4">
+                  <label for="imageFile" class="block text-gray-700">Select an image (Optional)</label>
+                  <input type="file" id="imageFile" accept="image/*" class="border border-gray-300 p-2 w-full">
+              </div>
+              <input type="url" name="CvPhoto" id="CvPhoto" placeholder="Enter image URL"  class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" hidden>
+              <img id="preview" src="" alt="Preview Image" class="mt-2 hidden">
+              </div>
+
+    <h2 class="text-2xl font-bold mb-4">Persönliche Daten</h2>
+  
+    <label for="Name" class="block mt-4">Name* (Pflichtfeld)</label>
+    <input type="text" name="Name" id="Name" placeholder="Vorname Nachname" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="on" required>
+  
+    <label for="StraßeHausnummer" class="block mt-4">Anschrift* (Pflichtfelder)</label>
+    <input type="text" name="StraßeHausnummer" id="StraßeHausnummer" placeholder="Straße Hausnummer" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+    <input type="text" name="PostleitzahlOrt" id="PostleitzahlOrt" placeholder="Postleitzahl Ort" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  
+    <label for="Telefon" class="block mt-4">Telefon* (Pflichtfeld)</label>
+    <input type="tel" name="Telefon" id="Telefon" placeholder="01234 56789" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  
+    <label for="Email" class="block mt-4">E-Mail* (Pflichtfeld)</label>
+    <input type="email" name="Email" id="Email" placeholder="example@email.de" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="on" required>
+  
+    <label for="Geburtsdatumort" class="block mt-4">Geburtsdatum, -ort* (Pflichtfeld)</label>
+    <input type="text" name="Geburtsdatumort" id="Geburtsdatumort" placeholder="TT.MM.JJJJ (Datum eingeben) in (Geburtsort)" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  
+    <h2 class="text-2xl font-bold mt-8">Praktische Erfahrung</h2>
+
+<label for="Praktikum" class="block mt-4">Praktikum* (Pflichtfelder)</label>
+<input type="text" name="DateStartPraktikum" id="DateStartPraktikum" placeholder="TT.MM.JJJJ" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+<input type="text" name="DateEndPraktikum" id="DateEndPraktikum" placeholder="TT.MM.JJJJ" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+<input type="text" name="Praktikum" id="Praktikum" placeholder="Praktikum als/im Bereich, Unternehmen, Ort" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="Praktikum2" class="block mt-4">Praktikum Nr 2 (Optional)</label>
+<input type="text" name="DateStartPraktikum2" id="DateStartPraktikum2" placeholder="TT.MM.JJJJ" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input type="text" name="DateEndPraktikum2" id="DateEndPraktikum2" placeholder="TT.MM.JJJJ" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input type="text" name="Praktikum2" id="Praktikum2" placeholder="Praktikum als/im Bereich, Unternehmen, Ort" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+<label for="Zukunftstag" class="block mt-4">Zukunftstag* (Pflichtfelder)</label>
+<input type="text" name="DatumZukunftstag" id="DatumZukunftstag" placeholder="TT.MM.JJJJ" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+<input type="text" name="Zukunftstag" id="Zukunftstag" placeholder="Zukunftstag als/im Bereich, Betrieb, Ort" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="Zukunftstag2" class="block mt-4">Zukunftstag Nr 2 (Optional)</label>
+<input type="text" name="DatumZukunftstag2" id="DatumZukunftstag2" placeholder="TT.MM.JJJJ" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input type="text" name="Zukunftstag2" id="Zukunftstag2" placeholder="Zukunftstag als/im Bereich, Betrieb, Ort" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+<h2 class="text-2xl font-bold mt-8">Schulbildung</h2>
+
+<label for="Schulabschluss" class="block mt-4">Schulabschluss* (Pflichtfeld)</label>
+<input type="text" name="Schulabschluss" id="Schulabschluss" placeholder="Bezeichnung, (voraussichtl.) Abschlussjahr JJJJ (Datum eingeben)" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="ExtraSchool" class="block mt-4">Wenn Sie eine weitere Schule hinzufügen möchten, können Sie dies hier angeben (Optional)</label>
+<input type="text" name="DateStartExtra" id="DateStartExtra" placeholder="TT.MM.JJJJ" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input type="text" name="DateEndExtra" id="DateEndExtra" placeholder="TT.MM.JJJJ" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input type="text" name="ExtraSchool" id="ExtraSchool" placeholder="Name der Extra Schule" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+<label for="HP" class="block mt-4">Datum & Name der Haupt- oder Realschule, Ort* (Pflichtfelder)</label>
+<input type="text" name="DateStartHP" id="DateStartHP" placeholder="TT.MM.JJJJ" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+<input type="text" name="DateEndHP" id="DateEndHP" placeholder="TT.MM.JJJJ  (Optional)" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input type="text" name="HP" id="HP" placeholder="Name der Haupt- oder Realschule, Ort" class="w-full mt-2 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="Grundschule" class="block mt-4">Name der Grundschule, Ort* (Pflichtfeld)</label>
+<input type="text" name="Grundschule" id="Grundschule" placeholder="Name der Grundschule, Ort" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<h2 class="text-2xl font-bold mt-8">Persönliche Fähigkeiten und Kompetenzen</h2>
+
+<label for="Computerkenntnisse" class="block mt-4">Computerkenntnisse* (Pflichtfeld)</label>
+<input type="text" name="Computerkenntnisse" id="Computerkenntnisse" placeholder="z.B. Grundkenntnisse (Name der Anwendung)" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="Sprachkenntnisse" class="block mt-4">Sprachkenntnisse* (Pflichtfeld)</label>
+<input type="text" name="Sprachkenntnisse" id="Sprachkenntnisse" placeholder="z.B. Englisch: gute Kenntnisse" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="PS" class="block mt-4">Persönliche Stärken* (Pflichtfeld)</label>
+<input type="text" name="PS" id="PS" placeholder="z.B. erfahren im Umgang mit Kindern, gut im Organisieren" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="Hobbys" class="block mt-4">Hobbys* (Pflichtfeld)</label>
+<input type="text" name="Hobbys" id="Hobbys" placeholder="z.B. Sportart, Interessengebiet" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<label for="OD" class="block mt-4">Ort, TT.MM.JJJJ* (Pflichtfeld)</label>
+<input type="text" name="OD" id="OD" placeholder="Ort, TT.MM.JJJJ" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+<button type="submit" id="downloadButton" class="mt-8 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">Herunterladen</button>
+</form>
+<div class="bg-white text-gray-800 p-4 rounded">
+    <strong>Wichtiger Hinweis:</strong> Wenn du bereits deinen Lebenslauf als <mark class="bg-yellow-200">lebenslauf.html</mark> heruntergeladen hast, gehe auf die Website <a href="https://cloudconvert.com/html-to-pdf" class="underline" target="_blank">https://cloudconvert.com/html-to-pdf</a> oder verwende eine andere Website deiner Wahl, um deinen Lebenslauf in ein PDF-Dokument umzuwandeln. Cloudconvert wurde von Deutschland entwickelt und kann dir dabei helfen.
+  </div>
+  
+  <footer class="py-4" style="font-family: 'Comic Neue', cursive;">
+    <div class="container mx-auto flex flex-col items-center">
+      <p class="mb-2 text-black">Muhammad Rameez Khan</p>
+      <p class="mb-2 text-black">E-Mail: <a href="mailto:gitdeu@gmail.com" class="text-gray-500">gitdeu@gmail.com</a></p>
+      <p class="mb-2 text-black">Tel.: <a href="tel:015217443173" class="text-gray-500">015217443173</a></p>
+      <p class="mb-2 text-black">WhatsApp: <a href="https://wa.me/4915217443173" class="text-gray-500" target="_blank">015217443173</a></p>
+      <a href="https://www.paypal.com/paypalme/muharr786/0.99" target="_blank" class="py-2 px-4 text-white rounded bg-blue-500 hover:bg-blue-200 text-white hover:text-white mt-2">Donate 0.99€ via Paypal</a>
+    </div>
+  </footer>
+  
+  
+    
+      <script src="work.js"></script>
+</body>
+</html>
